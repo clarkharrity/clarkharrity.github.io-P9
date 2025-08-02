@@ -1,0 +1,254 @@
+/* —— Reset —— */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Montserrat", Arial, sans-serif;
+    background: #fdfdfd;
+    color: #222;
+    padding: 20px;
+  }
+  
+  /* —— Layout —— */
+  .page-wrapper {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* —— Header —— */
+  .site-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 180px;
+    margin-bottom: 10px;
+  }
+  .site-title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ff003b;
+  }
+  
+  /* —— Filter Dropdown —— */
+  .search-section {
+    margin: 20px 0;
+  }
+  .search-section select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ff003b;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  /* —— Product Grid —— */
+  .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .product-card {
+    flex: 1 1 calc(50% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  .product-card.selected {
+    border: 2px solid #e3a535;
+    box-shadow: 0 0 5px #e3a535aa;
+  }
+  .product-card:hover {
+    box-shadow: 0 0 5px #ff003b88;
+  }
+  .product-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+  }
+  .product-info {
+    flex: 1;
+  }
+  .product-info h3 {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 4px;
+  }
+  .product-info p {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  /* —— Description —— */
+  .product-description {
+    display: none;
+    font-size: 0.75rem;
+    color: #444;
+    margin-top: 6px;
+    max-height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .product-card.expanded .product-description {
+    display: block;
+    max-height: none;
+  }
+  
+  /* —— Selected Products —— */
+  .selected-products {
+    margin-top: 30px;
+    border: 2px solid #ff003b;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .selected-products h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .selected-card {
+    background: #ffeaea;
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .selected-card button {
+    margin-left: 10px;
+    background: #ff003b;
+    color: white;
+    border: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* —— Generate Button —— */
+  .generate-btn {
+    margin-top: 15px;
+    width: 100%;
+    background: #e3a535;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .generate-btn:hover {
+    background: #c38621;
+  }
+  .generate-btn i {
+    margin-right: 8px;
+  }
+  
+  /* —— Chatbox —— */
+  .chatbox {
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid #ff003b;
+    border-radius: 6px;
+  }
+  .chatbox h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  .chat-window {
+    background: #f8f8f8;
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  .chat-response {
+    margin-top: 10px;
+    background: #e9f5ff;
+    padding: 8px;
+    border-left: 4px solid #2196f3;
+  }
+  
+  /* —— Chat Form —— */
+  .chat-form {
+    display: flex;
+    gap: 8px;
+  }
+  .chat-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ff003b;
+  }
+  .chat-form input:focus {
+    outline: none;
+    border-color: #e3a535;
+  }
+  .chat-form button {
+    background: #ff003b;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .chat-form button:hover {
+    background: #cc002f;
+  }
+  
+  /* —— Footer —— */
+  .site-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .site-footer a {
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+  }
+  .site-footer a:hover {
+    color: #ff003b;
+  }
+  
+  /* —— Responsive —— */
+  @media (min-width: 768px) {
+    .product-card {
+      flex: 1 1 calc(33.333% - 10px);
+    }
+  }
+  .product-info .desc-toggle {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    background: none;
+    border: none;
+    color: #e3a535;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+  
+  .product-desc {
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
